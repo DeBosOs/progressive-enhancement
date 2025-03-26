@@ -12,6 +12,46 @@
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Hoe ver ga je qua styling? Vraag jezelf dit altijd af */
+
+			.switch{
+				display: inline-block;
+				position: relative;
+				width: 60px;
+				height: 34px;
+			}
+
+			.switch input {
+				opacity: 0;
+				width: 0;
+				height: 0;
+				}
+			
+			.slider {
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #a5a5a5;
+				transition: .4s;
+			}
+
+			.slider:before{
+				position: absolute;
+				content: "";
+				height: 26px;
+				width: 26px;
+				left: 4px;
+				bottom: 4px;
+				background-color: rgb(255, 255, 255);
+				transition: .4s;
+			}
+
+			input:checked + .slider:before{
+				transform: translateX(20px);
+			}
+
 		</style>
 	</head>
 	<body>
@@ -26,5 +66,16 @@
 				<a href="assets/switch.mp4">assets/switch.mp4</a>
 			</video>
 		</details>
+
+		<!-- Dit zou voor safari horen te werken? dat doet het namelijk niet... -->
+		<!-- <label>
+			<input type=checkbox switch>
+		</label> -->
+
+		<label class="switch">
+			<input type="checkbox">
+			<span class="slider"></span>
+		  </label>
+
 	</body>
 </html>
