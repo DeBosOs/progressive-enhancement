@@ -16,8 +16,8 @@
 			.switch{
 				display: inline-block;
 				position: relative;
-				width: 60px;
-				height: 34px;
+				width: 100px;
+				height: 50px;
 			}
 
 			.switch input {
@@ -35,21 +35,30 @@
 				bottom: 0;
 				background-color: #a5a5a5;
 				transition: .4s;
+				border-radius: 35px;
 			}
 
 			.slider:before{
 				position: absolute;
 				content: "";
-				height: 26px;
-				width: 26px;
+				height: 45px;
+				width: 45px;
 				left: 4px;
 				bottom: 4px;
 				background-color: rgb(255, 255, 255);
 				transition: .4s;
+				border-radius: 35px;
+				align-content: center;
+				text-align: center;
 			}
 
 			input:checked + .slider:before{
-				transform: translateX(20px);
+				transform: translateX(45px);
+				content: "Aan";
+			}
+
+			input:checked + .slider{
+				background-color: rgb(64, 224, 179);
 			}
 
 		</style>
@@ -75,7 +84,7 @@
 		<label class="switch">
 			<input type="checkbox">
 			<span class="slider"></span>
-		  </label>
+		</label>
 
 	</body>
 </html>
